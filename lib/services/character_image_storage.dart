@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:path_provider/path_provider.dart';
 
+// 이미지 처리만 담당
 class CharacterImageStorage {
   static int _sequence = 0;
 

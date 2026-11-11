@@ -23,6 +23,7 @@ class CharacterInput {
   });
 }
 
+// 캐릭터 세트 JSON과 이미지 처리 엮기
 class CharacterSetStore {
   static int _sequence = 0;
 
@@ -49,6 +50,7 @@ class CharacterSetStore {
     required String title,
     required List<CharacterInput> characters,
   }) async {
+    // 세트 단위 검사
     if (title.trim().isEmpty) {
       throw const FormatException('세트 이름을 입력해 주세요.');
     }
@@ -63,6 +65,7 @@ class CharacterSetStore {
       throw const FormatException('캐릭터 ID가 중복되었습니다.');
     }
 
+    // 개별 캐릭터 데이터 검사
     for (final character in characters) {
       if (character.name.trim().isEmpty) {
         throw const FormatException('캐릭터의 이름은 비워둘 수 없습니다.');
@@ -134,7 +137,7 @@ class CharacterSetStore {
       await _cleanupUnused(previous, next);
     } catch (_) {
       // 저장 호출이 실패해도 실제 반영 여부가 불명확할 수 있음.
-      // 메타데이터를 다시 읽고 미참조 파일만 정리한다.
+      // 메타데이터를 다시 읽고 미참조 파일만 정리.
       try {
         final persisted = await repository.loadAll();
         final referenced = _referencedFiles(persisted);

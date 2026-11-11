@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:random_jebi_flutter/decision/decision_models.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+// 캐릭터 세트 리스트 조회/저장만
 class CharacterSetRepository {
   static const _key = 'CUSTOM_CHARACTER_SETS_V1';
 

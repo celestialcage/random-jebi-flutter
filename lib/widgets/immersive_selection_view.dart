@@ -224,7 +224,7 @@ class _ImmersiveSelectionViewState extends State<ImmersiveSelectionView> {
           LayoutBuilder(
             builder: (context, constraints) {
               final landscape =
-                  constraints.maxWidth > -560 &&
+                  constraints.maxWidth >= 560 &&
                   constraints.maxWidth > constraints.maxHeight;
 
               final first = _characterPanel(

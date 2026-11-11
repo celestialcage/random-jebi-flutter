@@ -54,8 +54,8 @@ android {
 
     buildTypes {
         debug {
-            applicationIdSuffix = '.debug'
-            versionNameSuffix = '-debug'
+            applicationIdSuffix = ".debug"
+            versionNameSuffix = "-debug"
         }
         release {
             // TODO: Add your own signing config for the release build.

@@ -57,6 +57,7 @@ key.properties
 # Android local environment
 /android/local.properties
 /android/.gradle/
+/android/build/
 
 # Legacy Flutter generated files
 .flutter-plugins
